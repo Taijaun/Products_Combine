@@ -44,5 +44,6 @@ Various ways to respond to state changes iOS APIs, such as AppDelegate methods a
 ## Escaping vs non escaping closures
 **Non-Escaping Closures**:
 By default, closures are considered non-escaping. A non-escaping closure is one that is executed within the lifetime of the function it's passed to. It means the closure is guaranteed to be executed before the function returns. Non-escaping closures can be used directly within the function without any special consideration. For example non-escaping closures are commonly used with higher order functions like map or filter.
+
 **Escaping Closures**:
 An escaping closure is one that outlives the function it's passed to. It means the closure can be stored, assigned to properties, or invoked outside the scope of the function. When a closure is escaping, you need to explicitly mark it with the @escaping attribute. For example a completion handler used to update the UI after an API.
